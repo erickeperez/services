@@ -56,7 +56,7 @@ export default function Home({
         )}
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Really Get started by editing <code>pages/index.js</code>
         </p>
 
         <div className="grid">
