@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+
 
 const Post = () => {
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
   const [group_number, setGroupNumber] = useState("");
 
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+  
   function handleSubmit(e) {
     e.preventDefault();
     const postData = async () => {
@@ -54,7 +60,7 @@ const Post = () => {
           onChange={(e) => setGroupNumber(e.target.value)}
         />
       </div>
-      <button type="submit">Submit</button>
+      <button className="btn btn-primary" type="submit">Submit</button>
     </form>
   );
 };
